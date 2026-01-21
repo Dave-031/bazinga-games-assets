@@ -117,7 +117,7 @@
         var r = function() {
                 var e, n = window.pokiSDKVersion;
                 n || (n = (e = RegExp("[?&]" + "ab" + "=([^&]*)").exec(window.location.search)) && decodeURIComponent(e[1].replace(/\+/g, " ")) || "v2");
-                return "https://cdn.jsdelivr.net/gh/Calvin99Cooler/bazinga-games-assets@main/gladih/poki-sdk-core.js"
+                return "https://cdn.jsdelivr.net/gh/Dave-031/bazinga-games-assets@e656debeb070ef94d533e0e37ebc0f31901a717b/gladih/poki-sdk-core.js"
             }(),
             i = document.createElement("script");
         i.setAttribute("src", r), i.setAttribute("type", "text/javascript"), i.onload = function() {
