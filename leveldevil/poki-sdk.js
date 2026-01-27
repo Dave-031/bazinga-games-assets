@@ -99,7 +99,7 @@
     });
 
     // --- Load Poki SDK from CDN instead of local path ---
-    var sdkUrl = "https://cdn.jsdelivr.net/gh/Calvin99Cooler/bazinga-games-assets@main/leveldevil/poki-sdk-core-v2.263.0.js";
+    var sdkUrl = "https://cdn.jsdelivr.net/gh/Dave-031/bazinga-games-assets@7bf49e01c505f0e8b28f588e7445fc3c221d73a7/leveldevil/poki-sdk-core-v2.263.0.js";
     var r = document.createElement("script");
     r.setAttribute("src", sdkUrl);
     r.setAttribute("type", "text/javascript");
