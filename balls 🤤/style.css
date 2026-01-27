@@ -10,7 +10,6 @@ body {
 #unity-container.unity-desktop {
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%)
 }
 
 #unity-container.unity-mobile {
@@ -31,7 +30,6 @@ body {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
   display: none
 }
 
@@ -89,7 +87,6 @@ body {
   position: absolute;
   left: 50%;
   top: 5%;
-  transform: translate(-50%);
   background: white;
   padding: 10px;
   display: none
