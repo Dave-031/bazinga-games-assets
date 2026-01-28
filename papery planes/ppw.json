@@ -1,13 +1,10 @@
 {
-  "@context": {
-    "@base": "https://cdn.jsdelivr.net/gh/MocVG/mocvg.github.io@main/projects/papery-planes/"
-  },
   "companyName": "Akos Makovics",
   "productName": "Papery Planes",
   "productVersion": "1.0",
-  "dataUrl": "unity/ppw.data.unityweb",
+  "dataUrl": "https://cdn.jsdelivr.net/gh/MocVG/mocvg.github.io@main/projects/papery-planes/unity/ppw.data.unityweb",
   "wasmCodeUrl": "https://raw.githubusercontent.com/MocVG/mocvg.github.io/refs/heads/main/projects/papery-planes/unity/ppw.wasm.code.unityweb",
-  "wasmFrameworkUrl": "unity/ppw.wasm.framework.unityweb",
+  "wasmFrameworkUrl": "https://cdn.jsdelivr.net/gh/MocVG/mocvg.github.io@main/projects/papery-planes/unity/ppw.wasm.framework.unityweb",
   "graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
   "webglContextAttributes": { "preserveDrawingBuffer": false },
   "splashScreenStyle": "Dark",
