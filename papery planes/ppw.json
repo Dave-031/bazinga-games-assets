@@ -1,4 +1,7 @@
 {
+  "@context": {
+    "@base": "https://cdn.jsdelivr.net/gh/MocVG/mocvg.github.io@main/projects/papery-planes/"
+  },
   "companyName": "Akos Makovics",
   "productName": "Papery Planes",
   "productVersion": "1.0",
