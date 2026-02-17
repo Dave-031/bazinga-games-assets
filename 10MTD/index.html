@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Reassembling File...</h1>
+    <p id="status">Starting download burst...</p>
+
+    <script>
+        async function downloadAndMerge() {
+            // 1. Define your chunks (Replace with your actual jsDelivr links)
+            const chunkUrls = [
+                'https://cdn.jsdelivr.net/gh/Dave-031/bazinga-games-assets@main/10MTD/10MinutesTillDawnWebGL.wasm.code.unityweb.part1',
+                'https://cdn.jsdelivr.net/gh/Dave-031/bazinga-games-assets@main/10MTD/10MinutesTillDawnWebGL.wasm.code.unityweb.part2'
+            ];
+            
+            const status = document.getElementById('status');
+
+            try {
+                // 2. Fetch all pieces at once
+                const promises = chunkUrls.map(url => 
+                    fetch(url).then(res => {
+                        if (!res.ok) throw new Error("Network error");
+                        return res.arrayBuffer();
+                    })
+                );
+
+                const buffers = await Promise.all(promises);
+                status.innerText = "Merging pieces...";
+
+                // 3. Combine into one Blob
+                const finalBlob = new Blob(buffers, { type: 'application/octet-stream' });
+                
+                // 4. Create a "fake" link and click it automatically
+                const downloadUrl = URL.createObjectURL(finalBlob);
+                const a = document.createElement('a');
+                a.href = downloadUrl;
+                a.download = "10MinutesTillDawnWebGL.wasm.code.unityweb"; // Set the real filename here
+                document.body.appendChild(a);
+                a.click();
+                
+                status.innerText = "Done! Your download should have started.";
+            } catch (err) {
+                status.innerText = "Error: " + err.message;
+            }
+        }
+
+        // Start the process as soon as the page loads
+        downloadAndMerge();
+    </script>
+</body>
+</html>
