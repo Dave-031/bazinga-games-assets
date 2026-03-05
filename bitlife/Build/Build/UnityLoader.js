@@ -1,3 +1,12 @@
+(function(){
+window.UnityCache = window.UnityCache || {};
+window.UnityCache.isAvailable = function(){ return false; };
+window.UnityCache.openDB = function(){ return Promise.resolve(null); };
+window.UnityCache.loadFromIndexedDB = function(){ return Promise.reject('disabled'); };
+window.UnityCache.saveToIndexedDB = function(){ return Promise.resolve(); };
+window.UnityCache.revalidate = function(){ return Promise.resolve(false); };
+window.UnityCache.downloadAndStore = function(){ return Promise.resolve(null); };
+})();
 var UnityLoader = UnityLoader || {
     Compression: {
         identity: {
